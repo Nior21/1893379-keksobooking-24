@@ -1,23 +1,45 @@
 /**
- * Функция, возвращающая случайное целое число из переданного диапазона включительно. Пример использования функции:
- * имя_функции(от, до); // Результат: целое число из диапазона "от...до"
- * ! Учтите, что диапазон может быть только положительный, включая ноль. А также придумайте, как функция должна вести себя, если передать значение «до» меньшее, чем значение «от», или равное ему.
+ * Функция getRandomNumber() возвращает псевдослучайное положительное целое число
+ * @param {number} min  мининимальное значение, которое может вернуть функция
+ * @param {number} max  максимальное значение, которое может вернуть функция
+ * @returns {number}    возвращает число в диапазоне от 'min' до 'max', либо undefined
  */
-
-/**
- * ФУНКЦИЯ ВОЗВРАЩАЕТ ПОЛОЖИТЕЛЬНЫЕ ПСЕВДОСЛУЧАЙНЫЕ ЧИСЕЛА
- * @param {number} from мининимальное значение, которое может вернуть функция
- * @param {number} to   максимальное значение, которое может возвращать функция
- * @returns {number}    возвращается число в диапазоне от 'from' до 'to', '-1' вернется если передано отрицательное число в любом из аргументов
- */
-const getRandomNumber = (from = 0, to=100) => {
-  if (from < 0 || to < 0) {
-    //console.warn('Don\'t use negative number in input');
-    return -1; // Т.к. функция должна возвращать только положительные значения, то для варианта с ошибкой ввода значений можно передавать "-1" или 'undefined', но т.к. 'undefined' возвращается и в любом случае, то обрабатывать случай с неверным использованием функции будет неудобно;
+const getRandomNumber = (min=0, max=100) => {
+  if (min < 0 || max < 0) {
+    // eslint-disable-next-line no-console
+    console.warn('Don\'t use negative number in input. А random number cannot be counted');
+    return undefined;
   }
-  return from + Math.floor(Math.random() * to);
+  if (min >= max) {
+    // eslint-disable-next-line no-console
+    console.warn('The minimum number at the input exceeds the maximum. А random number cannot be counted');
+    return undefined;
+  }
+  return min + Math.floor(Math.random() * (max - min));
 };
 
-for (let i = 0; i <= 100; i++) {
-  console.log(getRandomNumber(-6, 10));
-}
+getRandomNumber();
+
+
+/**
+ * Функция getRandomFloatNumber() возвращает псевдослучайное положительное число с указаным уровнем точности
+ * @param {number} min                  мининимальное значение, которое может вернуть функция
+ * @param {number} max                  максимальное значение, которое может вернуть функция
+ * @param {number} numberDecimalPlaces  кол-во знаков после запятой у генерируемых чисел
+ * @returns {number}                    возвращает число в диапазоне от 'min' до 'max' с указанным уровнем точности, либо undefined
+ */
+const getRandomFloatNumber = function (min=0, max=100, numberDecimalPlaces=0) {
+  if (min < 0 || max < 0) {
+    // eslint-disable-next-line no-console
+    console.warn('Don\'t use negative number in input. А random number cannot be counted');
+    return undefined;
+  }
+  if (min >= max) {
+    // eslint-disable-next-line no-console
+    console.warn('The minimum number at the input exceeds the maximum. А random number cannot be counted');
+    return undefined;
+  }
+  return Number((min + (Math.random() * (max - min))).toFixed(numberDecimalPlaces));
+};
+
+getRandomFloatNumber();
