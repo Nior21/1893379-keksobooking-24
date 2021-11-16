@@ -73,7 +73,6 @@ const createAd = function (id) {
   const lat = getRandomNumber(35.65000, 35.70000, 5);
   const lng = getRandomNumber(139.70000, 139.80000, 5);
 
-
   return {
     /**
      * Объект author — описывает автора.
@@ -97,7 +96,7 @@ const createAd = function (id) {
       'guests': getRandomNumber(1, 12),
       'checkin': getRandomArrayElement(CHECKINS),
       'checkout': getRandomArrayElement(CHECKOUTS),
-      'features': ['', '', ''], // массив строк — массив случайной длины из значений: wifi, dishwasher, parking, washer, elevator, conditioner. Значения не должны повторяться.
+      'features': FEATURES.filter(() => getRandomNumber(0, 1), 0),
       'description': '', // строка — описание помещения. Придумайте самостоятельно.
       'photos': ['', '', ''], // массив строк — массив случайной длины из значений: https://assets.htmlacademy.ru/content/intensive/javascript-1/keksobooking/duonguyen-8LrGtIxxa4w.jpg, https://assets.htmlacademy.ru/content/intensive/javascript-1/keksobooking/brandon-hoogenboom-SNxQGWxZQi0.jpg, https://assets.htmlacademy.ru/content/intensive/javascript-1/keksobooking/claire-rendall-b6kAwr1i0Iw.jpg.
     },
