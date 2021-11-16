@@ -1,4 +1,3 @@
-/** ИНИЦИИРУЕМ ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ */
 /**
  * Функция getRandomNumber() возвращает псевдослучайное положительное число с указанным уровнем точности
  * @param {number} min                  минимальное значение, которое может вернуть функция
@@ -17,7 +16,6 @@ const getRandomNumber = function (min = 0, max = 100, numberDecimalPlaces = 0) {
 };
 
 
-/** ИНИЦИАЛИЗИРУЕМ КОНСТАНТНЫЕ ОБЪЕКТЫ */
 const TITLES = [
   'Cur rumor cantare"',
   'Nunquam promissio lura"',
@@ -107,7 +105,6 @@ const createAd = function (id) {
   };
 };
 
-/** ГЕРЕНИРУЕМ И ВЫВОДИМ СОЗДАННЫЕ ОБЪЕКТЫ */
-/**const ads = */Array.from ( {length: 10}, (value, id) => createAd(id + 1));
+const SIMILAR_AD_COUNT = 10;
 
-//console.log(ads);
+Array.from ( {length: SIMILAR_AD_COUNT}, (value, id) => createAd(id + 1));
