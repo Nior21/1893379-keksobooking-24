@@ -57,17 +57,17 @@ const PHOTOS = [
 /**
  * Функция createAd() генерирует новое объявление
  * @param {number} id порядковый номер создаваемого объекта в массиве
- * @returns {{Offer: {features: string[], rooms: number, address: `${number}, ${number}`, checkin: *, price: number, guests: number, description: *, title: string, type: *, checkout: *, photos: string[]}, Author: {avatar: string}, Location: {lng: number, lat: number}}}
+ * @returns {{offer: {features: string[], rooms: number, address: string, checkin: (string|*), price: number, guests: number, description: string, title: string, type: (string|*), checkout: (string|*), photos: string[]}, author: {avatar: string}, location: {lng: number, lat: number}}}
  */
 const createAd = function (id) {
   const lat = getRandomNumber(35.65000, 35.70000, 5);
   const lng = getRandomNumber(139.70000, 139.80000, 5);
 
   return {
-    Author: {
+    author: {
       avatar: `img/avatars/user${ id < 10 ? `0${ id }` : id }.png`,
     },
-    Offer: {
+    offer: {
       'title': TITLES[id],
       'address': `${lat}, ${lng}`,
       'price': getRandomNumber(1000, 1000000),
@@ -80,7 +80,7 @@ const createAd = function (id) {
       'description': DESCRIPTION[id],
       'photos': PHOTOS.filter(() => getRandomNumber(0, 1), 0),
     },
-    Location: {
+    location: {
       lat,
       lng,
     },
