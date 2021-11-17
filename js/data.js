@@ -11,20 +11,24 @@ const TITLES = [
   'Nunquam resuscitabo glos"',
   'Cur abaculus trabem"',
   'Cur poeta potus"'];
+
 const TYPES = [
   'palace',
   'flat',
   'house',
   'bungalow',
   'hotel'];
+
 const CHECKINS = [
   '12:00',
   '13:00',
   '14:00'];
+
 const CHECKOUTS  = [
   '12:00',
   '13:00',
   '14:00'];
+
 const FEATURES = [
   'wifi',
   'dishwasher',
@@ -32,6 +36,7 @@ const FEATURES = [
   'washer',
   'elevator',
   'conditioner'];
+
 const DESCRIPTION = [
   'Ubi est superbus nix? Classiss sunt brabeutas de raptus competition. Sunt medicinaes pugna festus, albus animalises. Altus olla foris quaestios gabalium est. Cum luna cantare, omnes boreases demitto ferox, varius lumenes.',
   'Vigil de bassus tabes, imperium stella! Cum castor persuadere, omnes burguses imitari placidus, magnum parmaes. Ecce, peritus vortex! Decor de alter fermium, vitare epos! Sunt onuses talem peritus, pius exsules.',
@@ -43,6 +48,7 @@ const DESCRIPTION = [
   'Palus, detrius, et abaculus. Pol, a bene calceus, victrix! Devatios trabem, tanquam barbatus guttus. Itineris tramitems ortum in revalia! Sunt nixuses tractare regius, audax decores. Regius vox patienter desideriums idoleum est.',
   'Fortiss mori in amivadum! Est lotus advena, cesaris. Cum mens cadunt, omnes fortises acquirere ferox, mirabilis ventuses. Detriuss assimilant, tanquam brevis amicitia. Pius, germanus gabaliums solite contactus de albus, ferox turpis.',
   'Lapsus de talis rumor, perdere bulla! Ubi est germanus index? A falsis, aonides domesticus visus. Armarium bassus triticum est. Fiscinas studere, tanquam germanus fuga. Zetas sunt eleatess de fortis axona.'];
+
 const PHOTOS = [
   'https://assets.htmlacademy.ru/content/intensive/javascript-1/keksobooking/duonguyen-8LrGtIxxa4w.jpg',
   'https://assets.htmlacademy.ru/content/intensive/javascript-1/keksobooking/brandon-hoogenboom-SNxQGWxZQi0.jpg',
