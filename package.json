@@ -10,6 +10,7 @@
   "bugs": {
     "url": "https://github.com/htmlacademy-javascript/1893379-keksobooking-24/issues"
   },
+  "type": "module",
   "devDependencies": {
     "browser-sync": "2.26.14",
     "eslint": "7.18.0",
